@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Vina+Sans&display=swap');
+
+body{
+    background-color: burlywood;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main-frame{
+    box-sizing: border-box;
+    width: 640px;
+    height: 480px;
+
+    border: 15px solid rgb(55, 125, 206);
+    border-radius: 80px;
+
+    background-color: white;
+    box-shadow: inset -20px -20px 50px 15px lightblue, 20px 20px 20px 0px rgba(0, 0, 0, 0.3);
+
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    grid-template-rows: 1fr;
+
+    flex-shrink: 0;
+}
+
+.handleL,
+.handleR{
+    margin: 0;
+    background-color: rgb(55, 125, 206);
+    box-shadow: 20px 20px 20px 0px rgba(0, 0, 0, 0.3);;
+    width: 40px;
+    height: 200px;
+
+
+}
+
+.handleL{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.handleR{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.start-button{
+    all: unset;
+    cursor: pointer;
+
+    border: 2px solid rgb(55, 125, 206);
+    border-radius: 5px;
+
+    background-color: white;
+    font-family: 'Permanent Marker','Times New Roman', Times, serif;
+    font-size: 30px; 
+    color: blue;
+    padding: 5px 10px;
+       
+}
+
+
+.draw-menu{
+    background-color: transparent;
+    font-family: 'Permanent Marker','Times New Roman', Times, serif;
+    font-size: 20px;
+    border: 2px dotted grey;
+    
+    margin: 20px;
+    margin-left: 0;
+
+
+    transition: all 2s;
+}
+
+.draw-frame{
+    background-color: lightgray;
+    margin: 20px;
+    
+
+    display: grid;
+    grid-template: repeat( 16, 1fr) / repeat(16, 1fr);
+    grid-gap: 2px;
+
+    transition: all 2s;
+}
+
+.tiles{
+    background-color: white;
+    border-radius: 3px;
+}
+
