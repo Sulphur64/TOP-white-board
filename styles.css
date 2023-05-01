@@ -68,29 +68,70 @@ body{
     background-color: transparent;
     font-family: 'Permanent Marker','Times New Roman', Times, serif;
     font-size: 20px;
-    border: 2px dotted grey;
     
-    margin: 20px;
-    margin-left: 0;
+    margin: 20px 20px 150px 0px;
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    flex-shrink: 0;
 
 
     transition: all 2s;
 }
 
+.draw-menu-text{
+    font-size: 14px;
+    color: blue;
+    margin-top: auto;
+}
+
+.draw-menu-button{
+    all: unset;
+    cursor: pointer;
+
+    border: 2px solid blue;
+    border-radius: 3px;
+
+    background-color: transparent;
+    font-family: 'Permanent Marker','Times New Roman', Times, serif;
+    font-size: 14px; 
+    color: blue;
+    padding: 3px 10px;
+
+    margin-bottom: 10px;
+}
+
+.hel:hover{
+    zoom: 1.5;
+    background-color: white;
+    box-shadow: inset -10px -10px 20px 0px black;
+
+    transition: 0.7s;
+}
+
+.bifrost:hover{
+    zoom: 1.5;
+    background-color: yellow;
+    box-shadow: inset -4px -4px 20px 0px blue,inset 4px 4px 20px 0px red;
+    transition: 0.7s;
+}
+
 .draw-frame{
-    background-color: lightgray;
-    margin: 20px;
-    
-
+    background-color: rgba(173, 216, 230, 0.5);
+    margin: 25px 20px 60px 25px;
     display: grid;
-    grid-template: repeat( 16, 1fr) / repeat(16, 1fr);
-    grid-gap: 2px;
-
+    
     transition: all 2s;
 }
 
 .tiles{
-    background-color: white;
+    
     border-radius: 3px;
+    
+    
 }
 
