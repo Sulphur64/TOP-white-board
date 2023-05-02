@@ -82,6 +82,7 @@ function startBoard (state) { // handles the mainframepop and reset
         menuModRainbow.classList.add('draw-menu-button');
         menuModRainbow.classList.add('bifrost');
         menuModRainbow.textContent = "bifrost";
+        menuModRainbow.addEventListener("click", ()=> menuDrawStyleRainbow());
         
     };
 };
@@ -89,18 +90,31 @@ function startBoard (state) { // handles the mainframepop and reset
 
 function menuDrawStyleShades(){ //draw in shades of grey
     const tiles = document.querySelectorAll('div.tiles');
+
     tiles.forEach(node => {
         node.addEventListener('mouseenter',()=>{
-            console.log(node.style.backgroundColor)
+
             let RGBValues = node.style.backgroundColor.replaceAll(/[^0-9,]/ig,"").split(",");
-            //RGBValues.forEach(value => value -= 10);
+
             node.style.backgroundColor = `rgb(${RGBValues[0]-10}, ${RGBValues[1]-10}, ${RGBValues[2]-10})`;
+            
         });
     });
 };
 
-function menuDrawStyleRainbow(){ // draw in rainbow
 
+function menuDrawStyleRainbow(){ // draw in rainbow
+    const tiles = document.querySelectorAll('div.tiles');
+
+function random () { return Math.floor(Math.random()*255) };    
+
+    tiles.forEach(node => {
+        node.addEventListener('mouseenter',()=>{
+
+            node.style.backgroundColor = `rgb(${random()}, ${random()}, ${random()})`;
+            
+        });
+    });
 };
 
 function gridFiller(num){ //build the cells and attach an even listener to them
